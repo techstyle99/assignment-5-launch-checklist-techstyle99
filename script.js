@@ -8,6 +8,8 @@ window.addEventListener("load", function() {
     document.getElementById("faultyItems").style.visibility = "hidden"; 
     // create data object to store form data input
     form.addEventListener("submit", function(event){
+        event.preventDefault(); 
+        
         let pilotData = document.querySelector("input[name=pilotName]").value;
         let copilotData = document.querySelector("input[name=copilotName]").value;
         let fuelLevelData = document.querySelector("input[name=fuelLevel]").value; 
@@ -16,7 +18,7 @@ window.addEventListener("load", function() {
         // update display messages in launchStatuscheck div 
         formSubmission(document, list, pilotData, copilotData, fuelLevelData, cargoLevelData); 
         // cancel what form submit button does
-        event.preventDefault(); 
+        
     }); 
 
     // json object returned from API call 

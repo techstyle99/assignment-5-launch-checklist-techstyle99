@@ -76,7 +76,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         if (cargoLevel > 10000) {
             document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`; 
             document.getElementById("launchStatus").innerHTML = `Shuttle Not Ready for Launch`; 
-            document.getElementById("shuttleStatus").style.color = "#ff0000"; 
+            document.getElementById("launchStatus").style.color = "#ff0000"; 
             isValidInputType = false;
         }
 
